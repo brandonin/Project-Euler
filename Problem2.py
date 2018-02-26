@@ -4,13 +4,13 @@
 #
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-def fibonacci():
+def fibonacci(input):
     fibArray = [1, 2];
     sum = 2;
-    while fibArray[-1] <= 4000000:
+    while fibArray[-1] <= input:
         fibArray.append(fibArray[-1] + fibArray[-2]);
         if fibArray[-1] % 2 == 0:
             sum += fibArray[-1];
     print(sum);
 
-fibonacci();
+fibonacci(4000000);
